@@ -1,0 +1,46 @@
+<div class="searchBox">
+  <div class="search">
+    <input #search type="text" placeholder="Поиск контактов" (keyup)="searchContacts(search.value)">
+  </div>
+</div>
+
+<div class="contacts">
+  <ng-container *ngFor="let contact of contacts">
+    <div class="contact" [attr.id]="contact.id">
+      <div class="avatar">
+        <img [src]="contact.avatar" alt="">
+      </div>
+      <div class="contact-info" [ngStyle]="{'display': contact.id == visibleId ? 'none' : 'block'}">
+        <div class="name">{{contact.name}}</div>
+        <div class="phone">{{contact.phone}}</div>
+      </div>
+      <form #editForm='ngForm' method="post" novalidate
+            [ngStyle]="{'display': contact.id == visibleId ? 'block' : 'none'}"
+            (ngSubmit)="editContact(contact.id, contact.name, contact.phone)">
+        <input type="text" name="name" autocomplete="off" required [attr.placeholder]="contact.name"
+               [(ngModel)]="contact.name">
+        <input type="text" name="phone" autocomplete="off" required [attr.placeholder]="contact.phone"
+               [(ngModel)]="contact.phone">
+        <button type="submit" [disabled]="!editForm.valid">Изменить</button>
+      </form>
+      <div class="contact-actions" [ngStyle]="{'display': contact.id == visibleId ? 'none' : 'block'}">
+        <div class="edit-button" (click)="editClicked(contact.id)">Редактировать</div>
+        <div class="delete-button" (click)="deleteContact(this.contact.id)">Удалить</div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="searchValue === ''">
+    <div class="add-contact">
+      <div>Новый контакт</div>
+      <form #addForm="ngForm" method="post" novalidate (ngSubmit)="addContact(contact.name, contact.phone)">
+        <input class="form-control" type="text" placeholder="Имя" name="name" autocomplete="off" required
+               [value]="clear"
+               [(ngModel)]="contact.name">
+        <input class="form-control" type="text" placeholder="Номер телефона" name="phone" autocomplete="off" required
+               [value]="clear"
+               [(ngModel)]="contact.phone">
+        <button type="submit" [disabled]="!addForm.valid">Добавить</button>
+      </form>
+    </div>
+  </ng-container>
+</div>

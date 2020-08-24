@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "login": "admin",
+      "password": "admin"
+    }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Даша",
+      "phone": "87653454771",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQVYUbi-Jf5QxIW-koSAO97ZmKrOXadXeJ3xQ&usqp=CAU"
+    },
+    {
+      "id": 2,
+      "name": "Петя",
+      "phone": "86663211707",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQVYUbi-Jf5QxIW-koSAO97ZmKrOXadXeJ3xQ&usqp=CAU"
+    },
+    {
+      "id": 3,
+      "name": "Таня",
+      "phone": "83291954970",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQVYUbi-Jf5QxIW-koSAO97ZmKrOXadXeJ3xQ&usqp=CAU"
+    },
+    {
+      "id": 4,
+      "name": "Дима",
+      "phone": "87385062298",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQVYUbi-Jf5QxIW-koSAO97ZmKrOXadXeJ3xQ&usqp=CAU"
+    },
+    {
+      "id": 5,
+      "name": "Паша",
+      "phone": "84210007798",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQVYUbi-Jf5QxIW-koSAO97ZmKrOXadXeJ3xQ&usqp=CAU"
+    },
+    {
+      "id": 6,
+      "name": "Лена",
+      "phone": "86321478951",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQVYUbi-Jf5QxIW-koSAO97ZmKrOXadXeJ3xQ&usqp=CAU"
+    },
+    {
+      "id": 7,
+      "name": "Гена",
+      "phone": "87719354874",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQVYUbi-Jf5QxIW-koSAO97ZmKrOXadXeJ3xQ&usqp=CAU"
+    },
+    {
+      "id": 8,
+      "name": "Тима",
+      "phone": "86791964175",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQVYUbi-Jf5QxIW-koSAO97ZmKrOXadXeJ3xQ&usqp=CAU"
+    }
+  ]
+}

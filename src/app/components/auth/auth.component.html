@@ -1,0 +1,9 @@
+<div class="auth">
+  <h2>Авторизация</h2>
+  <form #authForm='ngForm' method="get" novalidate (ngSubmit)="loginAttempt(login, password)">
+    <input type="text" autocomplete="off" name="login" placeholder="Логин" required [(ngModel)]="login">
+    <input type="password" autocomplete="off" name="password" placeholder="Пароль" required [(ngModel)]="password">
+    <div class="error" [ngStyle]="{'display': error ? 'block' : 'none'}">Неверный логин или пароль</div>
+    <button type="submit" [disabled]="!authForm.valid">Войти</button>
+  </form>
+</div>
