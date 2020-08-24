@@ -4,3 +4,5 @@
 3. json-server db.json
 4. ng serve
 
+P.S. Логин и пароль для входа admin и admin
+
