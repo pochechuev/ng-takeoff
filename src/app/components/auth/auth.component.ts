@@ -28,7 +28,7 @@ export class AuthComponent implements OnInit {
     } else {
       this.error = true;
     }
-    console.log(this.userService.user.authenticated);
+    console.log(this.userService.authenticated);
   }
 }
 

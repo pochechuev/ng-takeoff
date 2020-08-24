@@ -1,23 +1,23 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
-import {User} from '../models/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  user: User;
+  authenticated = false;
 
   constructor(private http: HttpClient) {
   }
 
   loginUser(login: string, password: string) {
     this.http.get('http://localhost:3000/users?login=' + login + '&password=' + password).subscribe(data => {
-      this.user = data;
-      this.user.authenticated = true;
+      if (data[0]) {
+        this.authenticated = true;
+      }
     });
-    return 0;
+    return this.authenticated;
   }
 
   addUserContact(name: string, phone: string) {
